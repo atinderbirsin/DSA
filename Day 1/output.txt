@@ -1,1 +1,17 @@
--1000
+100
+Hi I am Alice
+Timeout {
+  _idleTimeout: 1,
+  _idlePrev: [TimersList],
+  _idleNext: [TimersList],
+  _idleStart: 9,
+  _onTimeout: [Function: bound introduce],
+  _timerArgs: undefined,
+  _repeat: null,
+  _destroyed: false,
+  Symbol(refed): true,
+  Symbol(kHasPrimitive): false,
+  Symbol(asyncId): 3,
+  Symbol(triggerId): 1,
+  Symbol(kAsyncContextFrame): undefined
+}
