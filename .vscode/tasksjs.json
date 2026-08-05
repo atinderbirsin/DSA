@@ -2,9 +2,9 @@
   "version": "2.0.0",
   "tasks": [
     {
-      "label": "Run C++",
+      "label": "run js",
       "type": "shell",
-      "command": "/opt/homebrew/bin/g++-16 -std=c++17 ${file} -o main && ./main < input.txt > output.txt",
+      "command": "node index.js < input.txt > output.txt",
       "options": {
         "cwd": "${fileDirname}"
       },
@@ -12,9 +12,7 @@
         "kind": "build",
         "isDefault": true
       },
-      "problemMatcher": [
-        "$gcc"
-      ]
+      "problemMatcher": []
     }
   ]
 }
