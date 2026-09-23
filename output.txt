@@ -1,0 +1,64 @@
+2147483647
+-9223372036854775808
+1000000000000000000
+1.234567
+7.66382764873687
+a
+TUF+
+12
+76
+87.8
+TUF
+ TUF+ is the best
+Adult
+C
+Largest is num5
+Wednesday
+56
+32
+1
+2
+3
+4
+5
+6
+7
+8
+9
+10
+5
+10
+15
+20
+25
+30
+35
+40
+45
+50
+5
+10
+15
+20
+25
+56
+76
+4873
+3782
+35
+t
+u
+f
+p
+l
+u
+s
+Before print function
+I am a print function
+After print function
+Sum of 2 numbers is 30
+Sum of 2 numbers is 112
+9
+5
+15
+100
