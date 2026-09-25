@@ -1,0 +1,14 @@
+[
+    {
+        "key": "cmd+ctrl+b",
+        "command": "workbench.action.tasks.runTask",
+        "args": "C++: Compile and Run",
+        "when": "editorLangId == 'cpp'"
+    },
+    {
+        "key": "cmd+ctrl+b",
+        "command": "workbench.action.tasks.runTask",
+        "args": "Java: Compile and Run",
+        "when": "editorLangId == 'java'"
+    }
+]
