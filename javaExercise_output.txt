@@ -1,0 +1,14 @@
+Success
+Sum is : 49
+Reverse of Number :876287
+Result of Fibonacci : 610
+5 * 5
+5 * 10
+5 * 15
+5 * 20
+5 * 25
+5 * 30
+5 * 35
+5 * 40
+5 * 45
+5 * 50

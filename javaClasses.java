@@ -50,6 +50,32 @@ class BankAccount {
     }
 }
 
+class Rectangle {
+    private double length;
+    private double width;
+    private double area;
+
+    Rectangle(double updatedLength , double updatedWidth) {
+        this.length = updatedLength;
+        this.width = updatedWidth;
+    }
+
+    Rectangle() {
+        this.length = 1.0;
+        this.width = 1.0;
+    }
+
+    void calculateArea() {
+        area = length * width;
+    }
+
+    void displayDetails() {
+        System.out.printf("Length : %.2f\n", length);
+        System.out.printf("Width : %.2f\n", width);
+        System.out.printf("Area : %.2f\n", area);
+    }
+}
+
 
 class javaClasses {
     public static void main(String[] args) {
@@ -80,5 +106,14 @@ class javaClasses {
 
         // Display final account details
         account.displayDetails();
+
+        Rectangle rect1 = new Rectangle();
+        Rectangle rect2 = new Rectangle(2, 4);
+
+        rect1.calculateArea();
+        rect2.calculateArea();
+
+        rect1.displayDetails();
+        rect2.displayDetails();
     }
 }

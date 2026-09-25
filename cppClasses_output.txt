@@ -2,3 +2,9 @@ Name : Raj
 Roll Number : 100
 Account Number : 9662375274869
 Balance : 5072.00
+Length is : 2.00
+Width is : 4.00
+Area is : 8.00
+Length is : 4.00
+Width is : 8.00
+Area is : 32.00

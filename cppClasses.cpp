@@ -56,6 +56,35 @@ class BankAccount {
         }
 };
 
+class Rectangle {
+    private:
+        double length;
+        double width;
+        double area;
+    
+    public:
+        Rectangle(double updatedLength , double updatedWidth) {
+            length = updatedLength;
+            width = updatedWidth;
+        };
+
+        Rectangle() {
+            length = 1.0;
+            width = 1.0;
+        };
+
+        void calculateArea() {
+            area = length * width;
+        };
+
+        void displayDetails() {
+            cout << "Length is : " << fixed << setprecision(2) << length << endl;
+            cout << "Width is : " << fixed << setprecision(2) << width << endl;
+            cout << "Area is : " << fixed << setprecision(2) << area << endl;
+        }
+
+};
+
 int main () {
     Student s1;
 
@@ -81,6 +110,15 @@ int main () {
 
     // Display final account details
     account.displayDetails();
+
+    Rectangle react1(2, 4);
+    Rectangle react2(4, 8);
+
+    react1.calculateArea();
+    react2.calculateArea();
+
+    react1.displayDetails();
+    react2.displayDetails();
 
     return 0;
 }
