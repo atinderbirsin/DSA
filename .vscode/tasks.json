@@ -2,28 +2,14 @@
     "version": "2.0.0",
     "tasks": [
         {
-            "label": "compile",
-            "type": "shell",
-            "command": "g++",
-            "args": [
-                "-std=c++17",
-                "-o",
-                "${fileBasenameNoExtension}",
-                "${file}"
-            ],
-            "group": {
-                "kind": "build",
-                "isDefault": false
-            }
-        },
-        {
             "label": "compile and run",
             "type": "shell",
-            "command": "/opt/homebrew/bin/g++-16 -std=c++17 -o ${fileBasenameNoExtension} ${file} && ./${fileBasenameNoExtension} < input.txt > output.txt",
+            "command": "mkdir -p bin && /opt/homebrew/bin/g++-16 -std=c++17 \"${file}\" -o \"bin/${fileBasenameNoExtension}\" && touch \"${fileBasenameNoExtension}_input.txt\" && \"./bin/${fileBasenameNoExtension}\" < \"${fileBasenameNoExtension}_input.txt\" > \"${fileBasenameNoExtension}_output.txt\"",
             "group": {
                 "kind": "build",
                 "isDefault": true
-            }
+            },
+            "problemMatcher": []
         }
     ]
 }
