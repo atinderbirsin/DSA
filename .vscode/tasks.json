@@ -12,6 +12,12 @@
             "type": "shell",
             "command": "mkdir -p bin && /opt/homebrew/opt/openjdk@17/libexec/openjdk.jdk/Contents/Home/bin/javac -d bin \"${file}\" && touch \"${fileBasenameNoExtension}_input.txt\" && /opt/homebrew/opt/openjdk@17/libexec/openjdk.jdk/Contents/Home/bin/java -cp bin \"${fileBasenameNoExtension}\" < \"${fileBasenameNoExtension}_input.txt\" > \"${fileBasenameNoExtension}_output.txt\"",
             "problemMatcher": []
+        },
+        {
+            "label": "JavaScript: Run",
+            "type": "shell",
+            "command": "touch \"${fileBasenameNoExtension}_input.txt\" && node \"${file}\" < \"${fileBasenameNoExtension}_input.txt\" > \"${fileBasenameNoExtension}_output.txt\"",
+            "problemMatcher": []
         }
     ]
 }
