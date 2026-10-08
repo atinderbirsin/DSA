@@ -8,3 +8,13 @@ Area : 1.00
 Length : 2.00
 Width : 4.00
 Area : 8.00
+Name : TV
+Price : 20000.0
+Category : Electronics
+Warranty : 2
+Brand : LG
+Name : Nike
+Price : 500.0
+Category : Tshirt
+Size : L
+Color : Black

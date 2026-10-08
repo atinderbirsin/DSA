@@ -18,6 +18,12 @@
             "type": "shell",
             "command": "touch \"${fileBasenameNoExtension}_input.txt\" && node \"${file}\" < \"${fileBasenameNoExtension}_input.txt\" > \"${fileBasenameNoExtension}_output.txt\"",
             "problemMatcher": []
+        },
+        {
+            "label": "Python: Run",
+            "type": "shell",
+            "command": "touch \"${fileBasenameNoExtension}_input.txt\" && python3 \"${file}\" < \"${fileBasenameNoExtension}_input.txt\" > \"${fileBasenameNoExtension}_output.txt\"",
+            "problemMatcher": []
         }
     ]
 }

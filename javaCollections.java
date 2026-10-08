@@ -147,7 +147,7 @@ public class javaCollections {
     };
 
     public static void explainPriorityQueue() {
-        // Mun heap DS
+        // Min heap DS
         // stores elements
         // and whenever you ask for peek , it gives you the smallest element
         PriorityQueue<Integer> pq = new PriorityQueue<>();

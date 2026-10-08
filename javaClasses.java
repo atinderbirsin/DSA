@@ -76,6 +76,56 @@ class Rectangle {
     }
 }
 
+class Product {
+    private String name;
+    private String category;
+    private double price;
+    Product(String _name, String _category, double _price) {
+        this.name = _name;
+        this.category = _category;
+        this.price = _price;
+    };
+
+    void displayDetails() {
+        System.out.println("Name : " +name);
+        System.out.println("Price : " +price);
+        System.out.println("Category : " +category);
+    };
+};
+
+class Electronics extends Product {
+    private int warrantyPeriodInYears;
+    private String brand;
+
+    Electronics(int _warrantyPeriodInYears, String _brand, String name, double price) {
+        super(name , "Electronics", price);
+        this.warrantyPeriodInYears = _warrantyPeriodInYears;
+        this.brand = _brand;
+    };
+
+    void displayDetails() {
+        super.displayDetails();
+        System.out.println("Warranty : " +warrantyPeriodInYears);
+        System.out.println("Brand : " +brand);
+    }
+};
+
+class Tshirt extends Product {
+    private String size;
+    private String color;
+
+    Tshirt(String _size, String _color, double price, String name) {
+        super(name , "Tshirt", price);
+        this.size = _size;
+        this.color = _color;
+    };
+
+    void displayDetails() {
+        super.displayDetails();
+        System.out.println("Size : " +size);
+        System.out.println("Color : " +color);
+    };
+};
 
 class javaClasses {
     public static void main(String[] args) {
@@ -115,5 +165,12 @@ class javaClasses {
 
         rect1.displayDetails();
         rect2.displayDetails();
+
+        Electronics electronics = new Electronics(2, "LG", "TV", 20000);
+        electronics.displayDetails();
+
+        Tshirt tshirt = new Tshirt("L", "Black",500, "Nike");
+        tshirt.displayDetails();
+
     }
 }
