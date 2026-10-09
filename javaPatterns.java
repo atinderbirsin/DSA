@@ -302,5 +302,58 @@ public class javaPatterns {
         };
 
         System.out.println();
-    }
+
+        // Pattern 17
+        //     A
+        //    ABA
+        //   ABCBA
+        //  ABCDCBA
+        // ABCDEDCBA
+        for (int i = 0; i < n; i++) {
+            for (int j = 0; j < n - i; j++) {
+                System.out.print(" ");
+            };
+            
+            char ch = 'A';
+            for (int k = 0; k < i * 2 + 1; k++) {
+                char cha = ch;
+                if (k <= i) {
+                    cha = (char)(ch + k);
+                } else {
+                    cha = (char)(ch + (i - (k - i)));
+                };
+                System.out.print(cha);
+            };
+            System.out.println();
+        };
+
+        System.out.println();
+
+        // Pattern 18
+        // E 
+        // D E 
+        // C D E 
+        // B C D E 
+        // A B C D E
+
+        for (int i = 1; i <= n; i++) {
+            char ch = 'A';
+            for (int j = 1; j <= i; j++) {
+                char cha = (char)(ch + n - j);
+                System.out.print(cha +" ");
+            };
+            System.out.println();
+        };
+        
+        System.out.println();
+        
+        // Count all digits of number
+        int num = 5267;
+        int count = 0;
+        while (num > 0) {
+            num = num / 10;
+            count++;
+        };
+        System.out.println(count);
+    };
 }

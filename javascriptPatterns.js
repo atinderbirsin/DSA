@@ -326,20 +326,75 @@ console.log();
 //   ABCBA
 //  ABCDCBA
 // ABCDEDCBA
-ch = "A";
 for (let i = 0; i < n; i++) {
     for (let j = 1; j <= n - (i + 1); j++) {
         process.stdout.write(" ");
     };
 
+    let ch = 'A';
     for (let k = 0; k < i * 2 + 1; k++) {
-        ch = k <= i ? String.fromCharCode(ch.charCodeAt + k) : String.fromCharCode(ch.charCodeAt - 1);
-        //if (k <= i) {
-          //  process.stdout.write(String.fromCharCode(ch.charCodeAt() + k));
-        //} else {
-            process.stdout.write(ch);
-        //}
+        if (k <= i) {
+            process.stdout.write(String.fromCharCode(ch.charCodeAt(0) + k));
+        } else {
+            process.stdout.write(String.fromCharCode(ch.charCodeAt(0) + (i - (k - i))));
+        }
     };
     console.log();
 }
 console.log();
+
+// Pattern 18
+// E 
+// D E 
+// C D E 
+// B C D E 
+// A B C D E
+ch = 'A'
+for (let i = 1; i <= n; i++) {
+    let char;
+    for (let j = 1; j <= i; j++) {
+        char = String.fromCharCode(ch.charCodeAt(0) + n - j);
+        process.stdout.write(`${char} `)
+    };
+    console.log();
+};
+
+console.log();
+
+// Count all digits of number
+
+let num = 5267;
+let count = 0;
+
+while (num > 0) {
+    num = Math.floor(num / 10);
+    count++;
+};
+
+console.log(count);
+
+// count the number of odd digits in a number
+num = 6528783926478;
+count = 0;
+while(num > 0) {
+    let lastDigit = num % 10;
+    num = Math.floor(num / 10);
+    if ((lastDigit % 2) !== 0) {
+        count++
+    };
+};
+
+console.log(count);
+
+// find the largest digit in a number
+num = 6528783926478;
+let largestDigit = 0;
+while(num > 0) {
+   let lastDigit = num % 10;
+   num =  Math.floor(num / 10);
+   if (lastDigit > largestDigit) {
+    largestDigit = lastDigit;
+   };
+};
+
+console.log(largestDigit);

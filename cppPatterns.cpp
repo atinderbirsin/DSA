@@ -339,8 +339,10 @@ int main()
     // DDDD
     // EEEEE
     char ch = 'A';
-    for (int i = 1; i <= n; i++) {
-        for (int j = 1; j <= i; j++) {
+    for (int i = 1; i <= n; i++)
+    {
+        for (int j = 1; j <= i; j++)
+        {
             cout << ch;
         };
         cout << endl;
@@ -348,6 +350,66 @@ int main()
     };
 
     cout << endl;
+
+    // Pattern 17
+    //     A
+    //    ABA
+    //   ABCBA
+    //  ABCDCBA
+    // ABCDEDCBA
+    for (int i = 0; i < n; i++)
+    {
+        for (int j = 0; j < n - i; j++)
+        {
+            cout << " ";
+        };
+
+        char ch = 'A';
+        for (int k = 0; k < i * 2 + 1; k++)
+        {
+            char cha = ch;
+            if (k <= i)
+            {
+                cha = ch + k;
+            }
+            else
+            {
+                cha = ch + (i - (k - i));
+            };
+            cout << cha;
+        };
+        cout << endl;
+    };
+
+    cout << endl;
+
+    // Pattern 18
+    // E 
+    // D E 
+    // C D E 
+    // B C D E 
+    // A B C D E
+    ch = 'A';
+    for (int i = 1; i <= n; i++) {
+        char cha = ch;
+        for (int j = 1; j <= i; j++) {
+            char cha = ch + n - j;
+            cout << cha << " ";
+        };
+        cout << endl;
+    };
+
+    cout << endl;
+
+    // Count all digits of number
+    int num = 526790;
+    int count = 0;
+    while(num > 0) {
+        num = num / 10;
+        count++;
+    };
+    cout << count << endl;
+
 
     return 0;
 }
